@@ -1,0 +1,6 @@
+{
+  "name": "Cook With Me",
+  "description": "An interactive, AI-powered sous-chef that generates recipes from your ingredients and guides you step-by-step with ingredient details and timers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
