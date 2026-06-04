@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-bento-bg: #FAF9F6;
+  --color-bento-card-bg: #F1EDE4;
+  --color-bento-card-border: #E5E1D8;
+  --color-bento-accent: #A0855B;
+  --color-bento-green: #6B705C;
+  --color-bento-peach: #FFE5D9;
+  --color-bento-peach-border: #F2C6B4;
+  --color-bento-peach-text: #D44D5C;
+}
+
+/* Customized utility styles for animations and aesthetics */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom modern scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(217, 119, 6, 0.15);
+  border-radius: 99px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(217, 119, 6, 0.3);
+}
+
+/* High contrast interactive borders */
+.border-gray-150 {
+  border-color: #ededec;
+}
+
+/* Custom pointer indicator */
+.pointer-cursor {
+  cursor: pointer;
+}
+
+/* 3D Cupboard Cabinet & Gamification animations */
+.cupboard-perspective {
+  perspective: 1200px;
+}
+
+.wood-grain-dark {
+  background: linear-gradient(135deg, #5c4033 0%, #3d2314 100%),
+              repeating-linear-gradient(45deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px, transparent 2px, transparent 10px);
+}
+
+.wood-grain-light {
+  background: linear-gradient(135deg, #a05a2c 0%, #803e13 100%),
+              repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 4px, transparent 4px, transparent 12px);
+}
+
+.shelf-wood {
+  background: linear-gradient(180deg, #6c4f3d 0%, #4a3427 100%);
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.1), 0 4px 6px rgba(0,0,0,0.2);
+}
+
+@keyframes floatUpXP {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-15px) scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.9);
+  }
+}
+
+.animate-float-xp {
+  animation: floatUpXP 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes drift-particle {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx, 50px), var(--dy, -80px)) rotate(var(--rot, 360deg));
+    opacity: 0;
+  }
+}
+
+.animate-drift-particle {
+  animation: drift-particle var(--duration, 1.5s) cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.8);
+  }
+}
+
+.animate-timer-pulse {
+  animation: pulseGlow 1s ease-in-out infinite;
+}
+
+@keyframes subtleShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.animate-shake {
+  animation: subtleShake 0.3s ease-in-out;
+}
+
+/* Custom Scrollbar for cabinet shelves */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.35);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.55);
+}
